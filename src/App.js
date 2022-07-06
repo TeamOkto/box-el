@@ -68,9 +68,7 @@ function App() {
   return (
 	<Router>
 		<Helmet helmetData={helmetData}>
-			<meta charset="UTF-8"/>
-			<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
-			<title>Hello World!</title>
+
 		</Helmet>
 		<div class="wp-block-cover alignfull has-background-dim">
 			<img loading="lazy" width="2000" height="1125" class="wp-block-cover__image-background wp-image-5990" alt="" src="https://eoatownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03.png" data-object-fit="cover" srcset="https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03.png 2000w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03-300x169.png 300w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03-1024x576.png 1024w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03-768x432.png 768w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03-1536x864.png 1536w" sizes="(max-width: 2000px) 100vw, 2000px" />
