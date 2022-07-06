@@ -83,17 +83,10 @@ function App() {
 			</div>
 		</div>
 		<div className="App">
-			<h1>Hello World!</h1>
-			<a className="App-link" href="/fr">FR</a>
-			&nbsp; | &nbsp;
-			<a className="App-link" href="/en">EN</a>
+			<h1>Event is coming soon.</h1>
+			<br/>
+			<h1>Événement disponible bientôt.</h1>
 		</div>
-        <Routes>
-			<Route exact path="/:lang" element={<Video/>}/>
-        </Routes>
-        <Routes>
-			<Route exact path="/:lang" element={<Chat/>}/>
-        </Routes>
 	</Router>
   );
 }

@@ -1,6 +1,12 @@
 .App
 {
   text-align: center;
+
+	padding: 50px;
+}
+.App h1
+{
+	font-size: 20px;
 }
 
 .App-link
@@ -29,6 +35,9 @@ body
 	margin: 0px;
 	border: 0px;
 	outline: none;
+
+	font-family: "Arial";
+	color: #000;
 }
 
 .wp-block-cover-image.has-background-dim:not([class*=-background-color]), .wp-block-cover.has-background-dim:not([class*=-background-color])
