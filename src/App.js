@@ -81,9 +81,15 @@ function App() {
 			</div>
 		</div>
 		<div className="App">
-			<h1>Event is coming soon.</h1>
-			<br/>
-			<h1>Événement disponible bientôt.</h1>
+
+			<h1>Event is coming soon</h1>
+			<h2>July 21st - 3pm</h2>
+
+			<br/><br/>
+
+			<h1>Événement disponible bientôt</h1>
+			<h2>21 Juillet - 15h</h2>
+
 		</div>
 	</Router>
   );
