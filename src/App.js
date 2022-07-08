@@ -94,6 +94,7 @@ function App() {
 			<div class="agenda">
 
 				<h1>AGENDA</h1>
+				<h2>July 21st at 3pm &bull; 21 Juillet à 15h</h2>
 
 				<div class="table">
 					<div class="row">
