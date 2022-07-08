@@ -7,15 +7,23 @@
 .App h1
 {
 	font-size: 20px;
+	margin-bottom: 20px;
 }
 .App h2
 {
 	font-size: 16px;
 }
 
-.App-link
+.button
 {
-	color: #ff0099;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0px 20px;
+	color: #fff;
+	background-color: #000;
+	text-decoration: none;
+	margin: 20px;
 }
 
 .App-chat
@@ -42,6 +50,47 @@ body
 
 	font-family: "Arial";
 	color: #000;
+	font-size: 14px;
+}
+
+.table
+{
+	display: table;
+	border-spacing: 10px;
+	width: 100%;
+	max-width: 800px;
+	align: center;
+	margin: 0 auto;
+}
+.row, .cell
+{
+	background-color: #eae8e4;
+}
+.row
+{
+	display: table-row;
+}
+.cell
+{
+	display: table-cell;
+	padding: 20px;
+	text-align: left;
+}
+.cell.num
+{
+	text-align: center;
+	vertical-align: middle;
+	padding: 0px 20px;
+	font-size: 20px;
+	color: #b3b2b0;
+}
+
+.vimeo
+{
+	width: 100%;
+	max-width: 1280px;
+	align: center;
+	margin: 0 auto;
 }
 
 .wp-block-cover-image.has-background-dim:not([class*=-background-color]), .wp-block-cover.has-background-dim:not([class*=-background-color])
