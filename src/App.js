@@ -12,9 +12,11 @@ import {
 
 import { Helmet, HelmetData } from 'react-helmet-async';
 
-import './App.css';
-
 import Chat from './Chat.js'
+import Agenda from './Agenda.js'
+import Video from './Video.js'
+
+import './App.css';
 
 /**
  * Init Helmet
@@ -34,39 +36,30 @@ const ChatLoader = () => {
 };
 
 /**
+ * Agenda loader
+ */
+
+const AgendaLoader = () => {
+	const { lang } = useParams();
+	return (
+		<Agenda lang={lang}/>
+	);
+};
+
+/**
  * Video component
  */
 
-const Video = () => {
+const VideoLoader = () => {
 	const { lang } = useParams();
-
-	var link = '';
-	if ( lang === 'fr' )
-		link = 'https://vimeo.com/event/2251400/embed';
-	else if ( lang === 'en' )
-		link = 'https://vimeo.com/event/2265661/embed';
-	else
-		return ''; // Invalid or missing language
-
 	return (
-		<div className="vimeo">
-			<div
-				style={{
-					padding: '56.25% 0 0 0',
-					position: 'relative',
-				}}
-			>
-				<iframe title="vimeo" src={link} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style={{
-					position: 'absolute',
-					top: '0',
-					left: '0',
-					width: '100%',
-					height: '100%',
-				}}></iframe>
-			</div>
-		</div>
+		<Video lang={lang}/>
 	);
 };
+
+/**
+ * App
+ */
 
 function App() {
 
@@ -91,90 +84,21 @@ function App() {
 
 		<div className="App">
 
-			<div className="agenda">
+			<Routes>
+				<Route exact path="/" element={<AgendaLoader/>}/>
+				<Route exact path="/:lang" element={<AgendaLoader/>}/>
+			</Routes>
 
-				<h1>AGENDA</h1>
-				<h2>July 21st at 3pm &bull; 21 Juillet à 15h</h2>
-
-				<div className="table">
-					<div className="row">
-						<div className="cell num">1</div>
-						<div className="cell">
-							<strong>Welcome<br/>
-							Bienvenue</strong><br/>
-							Rick Gadd, President EL Canada and Essilor Instruments NA
-						</div>
-					</div>
-					<div className="row">
-						<div className="cell num">2</div>
-						<div className="cell">
-							<strong>EssilorLuxottica Canada Story<br/>
-							L’histoire de EssilorLuxottica Canada</strong><br/>
-							Rick Gadd, President EL Canada and Essilor Instruments NA
-						</div>
-					</div>
-					<div className="row">
-						<div className="cell num">3</div>
-						<div className="cell">
-							<strong>Meet the Leadership Team<br/>
-							Rencontrer l’équipe de direction</strong><br/>
-							Canada Executive Leadership Team
-						</div>
-					</div>
-					<div className="row">
-						<div className="cell num">4</div>
-						<div className="cell">
-							<strong>New Ways of Working Update<br/>
-							Mise à jour des nouvelles méthodes de travail</strong><br/>
-							Isabelle Thériault, Vice President of Human Resources EL Canada
-						</div>
-					</div>
-					<div className="row">
-						<div className="cell num">5</div>
-						<div className="cell">
-							<strong>Eye to Eye with Leaders Open Q&amp;A<br/>
-							Partage de point de vue avec les leaders, questions et réponses ouvertes</strong><br/>
-							Canada Executive Leadership Team
-						</div>
-					</div>
-					<div className="row">
-						<div className="cell num">6</div>
-						<div className="cell">
-							<strong>Special Guest Speaker<br/>
-							Conférencier invité</strong><br/>
-							Maxime Laoun, Olympic Gold Medalist interviewed by Pascale Desroches, Sr. Marketing<br/>
-							Director EL Canada
-						</div>
-					</div>
-					<div className="row">
-						<div className="cell num">7</div>
-						<div className="cell">
-							<strong>Final Thoughts &amp; Close<br/>
-							Conclusion</strong><br/>
-							Rick Gadd
-						</div>
-					</div>
-					<div className="row">
-						<div className="cell num">8</div>
-						<div className="cell">
-							<strong>Happy Hour (4:30-5:30)<br/>
-							Cocktail (4:30-5:30)</strong>
-						</div>
-					</div>
-				</div>
-
-			</div>
+			<Routes>
+				<Route exact path="/:lang" element={<VideoLoader/>}/>
+			</Routes>
 
 			<div className="buttons">
-				<h1>Choisissez une langue pour l'événement</h1>
+				<h2>Choisissez une langue pour l'événement</h2>
 				<h2>Choose a language for the event</h2>
 				<a className="button" href="/fr">Français</a>
 				<a className="button" href="/en">English</a>
 			</div>
-
-			<Routes>
-				<Route exact path="/:lang" element={<Video/>}/>
-			</Routes>
 
 			<Routes>
 				<Route exact path="/:lang" element={<ChatLoader/>}/>
