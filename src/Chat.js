@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
 
+import './Chat.css';
+
 import { initializeApp } from "firebase/app"
 import { getFirestore, collection, addDoc } from "@firebase/firestore";
 
@@ -29,7 +31,7 @@ export default class Chat extends Component {
 		addDoc(collection(db, 'cities'), city);*/
 
 	    return(
-			<div className="App-chat">
+			<div className="chat">
 				Chat (lang: {this.props.lang})
 			</div>
 		)

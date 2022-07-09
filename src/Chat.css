@@ -1,0 +1,11 @@
+
+.chat
+{
+	position: fixed;
+	right: 20px;
+	bottom: 0px;
+	width: 250px;
+	background-color: #eee;
+	padding: 20px;
+}
+
