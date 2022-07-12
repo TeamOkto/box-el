@@ -100,9 +100,11 @@ function App() {
 				<a className="button" href="/en">English</a>
 			</div>
 
-			<Routes>
-				<Route exact path="/:lang" element={<ChatLoader/>}/>
-			</Routes>
+			{
+			//<Routes>
+			//	<Route exact path="/:lang" element={<ChatLoader/>}/>
+			//</Routes>
+			}
 
 			<div className="footer">
 
