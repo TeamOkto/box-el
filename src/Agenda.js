@@ -17,7 +17,7 @@ export default class Agenda extends Component {
 		    return(
 				<div>
 					<h1>AGENDA</h1>
-					<h2>July 21st at 3pm &bull; 21 Juillet à 15h</h2>
+					<h2>July 21st at 3pm EDT &bull; 21 Juillet à 15h, Heure avancée de l’Est</h2>
 					<div id="agenda" className="agenda">
 						<div className="table">
 							<div className="row">
@@ -25,13 +25,13 @@ export default class Agenda extends Component {
 								<div className="cell">
 									<strong>Welcome<br/>
 									Bienvenue</strong><br/>
-									Rick Gadd, President EL Canada and Essilor Instruments NA
+									Rick Gadd, President EssilorLuxottica Canada and Essilor Instruments NA
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">2</div>
 								<div className="cell">
-									<strong>EssilorLuxottica Canada Story<br/>
+									<strong>EssilorLuxottica Wholesale Canada Story<br/>
 									L’histoire de EssilorLuxottica Canada</strong><br/>
 									Rick Gadd, President EL Canada and Essilor Instruments NA
 								</div>
@@ -39,7 +39,7 @@ export default class Agenda extends Component {
 							<div className="row">
 								<div className="cell num">3</div>
 								<div className="cell">
-									<strong>Meet the Leadership Team<br/>
+									<strong>Meet the Canadian Leadership Team<br/>
 									Rencontrer l’équipe de direction</strong><br/>
 									Canada Executive Leadership Team
 								</div>
@@ -65,7 +65,7 @@ export default class Agenda extends Component {
 								<div className="cell">
 									<strong>Special Guest Speaker<br/>
 									Conférencier invité</strong><br/>
-									Maxime Laoun, Olympic Gold Medalist interviewed by Pascale Desroches, Sr. Marketing<br/>
+									Maxime Laoun, Olympic Gold Medalist interviewed by Pascale Desroches, Head of Marketing for Essilor Canada<br/>
 									Director EL Canada
 								</div>
 							</div>
@@ -80,8 +80,8 @@ export default class Agenda extends Component {
 							<div className="row">
 								<div className="cell num">8</div>
 								<div className="cell">
-									<strong>Happy Hour (4:30-5:30)<br/>
-									Cocktail (4:30-5:30)</strong>
+									<strong>Happy Hour - RX Café (4:30-5:30)<br/>
+									Cocktail - RX Café (4:30-5:30)</strong>
 								</div>
 							</div>
 						</div>
