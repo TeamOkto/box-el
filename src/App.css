@@ -32,6 +32,7 @@ h2
 	background-color: #000;
 	text-decoration: none;
 	margin: 20px;
+	width: 80px;
 }
 
 html
@@ -234,4 +235,22 @@ audio, embed, img, object, video
 	aspect-ratio: auto 1024 / 118;
 	height: 118px;
 }*/
+
+@media (max-width: 600px)
+{
+	.App
+	{
+		padding: 50px 20px;
+	}
+
+	.buttons
+	{
+		padding: 50px 0px;
+	}
+	.button
+	{
+		margin: 10px;
+		width: 60px;
+	}
+}
 
