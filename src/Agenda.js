@@ -95,7 +95,7 @@ export default class Agenda extends Component {
 				<div>
 					<h1>AGENDA</h1>
 					<div class="agenda">
-						<a className="button" href="/">{label}</a>
+						<a className="button auto" href="/">{label}</a>
 					</div>
 				</div>
 			)

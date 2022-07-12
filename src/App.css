@@ -34,6 +34,10 @@ h2
 	margin: 20px;
 	width: 80px;
 }
+.button.auto
+{
+	width: auto;
+}
 
 html
 {
