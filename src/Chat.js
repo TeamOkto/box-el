@@ -1,40 +1,86 @@
+import React, { useEffect, useRef } from 'react';
+import { useState } from 'react';
+import { db } from './firebase.config';
 
-import React, { Component } from 'react';
+import { collection, getDocs, addDoc, serverTimestamp } from 'firebase/firestore';
 
 import './Chat.css';
 
-import { initializeApp } from "firebase/app"
-import { getFirestore, collection, addDoc } from "@firebase/firestore";
+const Chat = () => { 
+	const [messages, setMessages] = useState([]);
 
-const firebaseConfig = {
-	apiKey: "AIzaSyB07inVKgYo4W2lh2UcJw88-i12iobf1vo",
-	authDomain: "okto-chat.firebaseapp.com",
-	databaseURL: "https://okto-chat-default-rtdb.firebaseio.com",
-	projectId: "okto-chat",
-	storageBucket: "okto-chat.appspot.com",
-	messagingSenderId: "314760933981",
-	appId: "1:314760933981:web:524278895599cc2e2ed3b4"
+	const colRef = collection(db, 'messages');
+
+		getDocs(colRef)
+		.then((snapshot)=> {
+			let messagesUsers = [];
+			snapshot.forEach((doc) => {
+				messagesUsers.push({...doc.data(), id: doc.id})
+			});
+			setMessages(messagesUsers);
+		})
+		.catch((err) => console.error(err.message))
+
+	const [data, setData] = useState({
+		name: ""
+	})
+
+	const ref = useRef();
+	const refSendMessage = useRef();
+
+	const handlerClick = (event) => {
+		event.preventDefault();
+		setData({name: ref.current.value})
+		localStorage.setItem('user', ref.current.value);
+	}
+
+	useEffect(()=> {
+		setData({name: localStorage.getItem('user')})
+	}, [])
+
+	const sendMessageHandler = (e) => {
+		e.preventDefault();
+		addDoc(colRef, {
+			fullname: localStorage.getItem('user'),
+			message: refSendMessage?.current?.value,
+			timestamp: serverTimestamp()
+		})
+	}
+
+	return(
+		<div className="chat_wrapper">
+			<div className="chat_wrapper__header">
+				<p className="chat_wrapper__title">Chat</p>
+			</div>
+			{localStorage.getItem('user') !== null && localStorage.getItem('user') !== '' ?
+			<>
+				<div className="chat_content__wrapper">
+					{messages.map((message, index) => (
+						<div key={index} className="chat_content__wrapper_box">
+							<div className="chat_content__wrapper_userName">{message?.fullname}</div>
+							<div>{message?.message}</div>
+						</div>
+					))}
+				</div>
+				<form className="chat_wrapper__footer">
+					<input ref={refSendMessage} type="text" className="chat_wrapper__footer_input input_styles" placeholder='type here' required/>
+					<button type='submit' className="chat_wrapper__footer_send" onClick={sendMessageHandler}>
+						<img src='/send_message.png' alt='send'/>
+					</button>	
+				</form>
+			</>
+			:
+			<div className="chat_wrapper__auth">
+				<h2>Please enter your full name</h2>
+				<form>
+					<input ref={ref} type="text" className="input_styles" placeholder='type here' required/>
+					<button type='submit' onClick={handlerClick}>Confirm</button>
+				</form>
+			</div>
+			}
+		</div>
+	);
 };
 
-const app = initializeApp(firebaseConfig);
-const db  = getFirestore(app);
-
-export default class Chat extends Component {
-
-	render() {
-
-		/*const city = {
-			name: "Los Angeles",
-			state: "CA",
-			country: "USA"
-		}
-		addDoc(collection(db, 'cities'), city);*/
-
-	    return(
-			<div className="chat">
-				Chat (lang: {this.props.lang})
-			</div>
-		)
-  }
-}
+export default Chat;
 

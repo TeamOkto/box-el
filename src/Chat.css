@@ -1,11 +1,89 @@
-
-.chat
-{
+.chat_wrapper{
 	position: fixed;
-	right: 20px;
-	bottom: 0px;
-	width: 250px;
-	background-color: #eee;
-	padding: 20px;
+	right: 10%;
+	bottom: 0;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px #00000036;
+	width: 300px;
+	border-radius: 10px;
+	z-index: 20;
+}
+.chat_wrapper__header{
+	padding: 5px 20px;
+}
+.chat_content__wrapper{
+	border-top: 1px solid rgb(196, 196, 196);
+	width: 100%;
+	height: 400px;
+	background-color: #fff;
+	overflow-y: auto;
+}
+.chat_wrapper__footer{
+	padding: 5px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.input_styles{
+	background-color: rgb(210, 210, 210);
+	width: 150px;
+	height: 30px;
+	border-radius: 20px;
+	padding: 0 20px;
+	border: none;
+}
+
+.chat_wrapper__footer_send{
+	width: 40px;
+	height: 40px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+.chat_wrapper__auth{
+	border-top: 1px solid rgb(196, 196, 196);
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+	overflow-y: hidden;
+	padding: 100px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.chat_wrapper__auth form{
+	display: flex;
+	flex-direction: column;
+}
+
+.chat_wrapper__auth button{
+	background: transparent;
+	border: none;
+	color: rgb(0, 136, 255);
+	font-size: 18px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+.chat_content__wrapper_box{
+	max-width: 150px;
+	width: 100%;
+	white-space: pre-wrap;
+	margin: 15px 0;
+	padding: 5px 20px;
+}
+
+.chat_content__wrapper_userName{
+	font-size: 14px;
+	font-weight: 600;
 }
 
