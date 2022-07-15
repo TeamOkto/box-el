@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { db } from './firebase.config';
 
 
-import { collection, getDocs, addDoc, doc, getDoc, serverTimestamp, orderBy, query, queryEqual } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, orderBy, query, onSnapshot } from 'firebase/firestore';
 
 import './Chat.css';
 
@@ -11,82 +11,89 @@ const Chat = () => {
 
 	let today = new Date()
 
-	const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState([]);
+	const [stateChat, setStateChat] = useState(false);
 
-	const colRef = collection(db, "messages");
+    const colRef = collection(db, "messages");
 
-		useEffect(() => {
-			const q = query(colRef, orderBy("timestamp"));
-			const querySnapshot = getDocs(q);
+    useEffect(()=>{
+        onSnapshot(query(colRef, orderBy('timestamp')), querySnapshot=>{
+            let messagesUsers = [];
+            querySnapshot.forEach(qs=>{
+                messagesUsers.push({...qs.data(), id: qs.id})
+                setMessages(messagesUsers);
+            })
+        })
+    },[])
 
-			let messagesUsers = [];
+    const [data, setData] = useState({
+        name: '',
+        indef: 2
+    })
 
-			querySnapshot
-			.then((snapshot)=> {
-				snapshot.forEach((doc) => {
-					messagesUsers.push({...doc.data(), id: doc.id})
-				});
-				setMessages(messagesUsers);
-			})
-			.catch((err) => console.error(err.message));
-		}, []);
+    const ref = useRef();
+    const refSendMessage = useRef();
 
-	const [data, setData] = useState({
-		name: "",
-		indef: 2
+    const handlerClick = (event) => {
+        event.preventDefault();
+        setData({name: ref.current.value})
+        localStorage.setItem('user', ref.current.value);
+        localStorage.setItem('indef', today.getMilliseconds());
+    }
+
+    useEffect(()=> {
+        setData({name: localStorage.getItem('user'), indef: localStorage.getItem('indef')})
+    }, [])
+	const refChatWrapper = useRef();
+	const scrollToBottom = useRef();
+
+
+	useEffect(() => {
+		refChatWrapper?.current?.scrollIntoView({behavior: "smooth"})
+	}, [messages])
+
+    const sendMessageHandler = (e) => {
+        e.preventDefault();
+		if(refSendMessage?.current?.value !== ''){
+			addDoc(colRef, {
+				indef: localStorage.getItem('indef'),
+				fullname: localStorage.getItem('user'),
+				message: refSendMessage?.current?.value,
+				timestamp: serverTimestamp()
+			});
+			refSendMessage.current.value = '';
+		}
+    }
+
+	useEffect(() => {
+		refChatWrapper?.current?.scrollIntoView({behavior: "smooth"})
 	})
 
-	const ref = useRef();
-	const refSendMessage = useRef();
-
-	const handlerClick = (event) => {
-		event.preventDefault();
-		setData({name: ref.current.value})
-		localStorage.setItem('user', ref.current.value);
-		localStorage.setItem('indef', today.getMilliseconds());
-	}
-
-	useEffect(()=> {
-		setData({name: localStorage.getItem('user'), indef: localStorage.getItem('indef')})
-	}, [])
-
-	const sendMessageHandler = (e) => {
-		e.preventDefault();
-		addDoc(colRef, {
-			indef: localStorage.getItem('indef'),
-			fullname: localStorage.getItem('user'),
-			message: refSendMessage?.current?.value,
-			timestamp: serverTimestamp()
-		})
-	}
-
-	async function queryEqual(){
-		const docRef = doc(db, 'messages', '712')
-		const docSnap = await getDoc(docRef)
-		if (docSnap.exists()) {
-			console.log("Document data:", docSnap.data());
-		  }
-		  else {
-			// doc.data() will be undefined in this case
-			console.log("No such document!");
-		  }
-	}
-	queryEqual();
-
 	return(
-		<div className="chat_wrapper">
-			<div className="chat_wrapper__header">
+		<div className={"chat_wrapper"}>
+			<div onClick={() => (setStateChat(!stateChat))} className="chat_wrapper__header">
 				<p className="chat_wrapper__title">Chat</p>
+				<button 
+						className={!stateChat ? "hidden-button" : "visible-button"} 
+						onClick={() => setStateChat(!stateChat)}>
+					×
+				</button>
 			</div>
 			{localStorage.getItem('user') !== null && localStorage.getItem('user') !== '' ?
 			<>
-				<div className="chat_content__wrapper">
+			{stateChat &&
+			<>
+				<div ref={scrollToBottom} className="chat_content__wrapper">
 					{messages.map((message, index) => (
-						<div key={index} className={true ? 'chat_content__wrapper_box owner-message' : 'chat_content__wrapper_box'}>
-							<div className="chat_content__wrapper_userName">{message?.fullname}</div>
+						<div key={index} className={message.indef == localStorage.getItem('indef') ? 'chat_content__wrapper_box owner-message' : 'chat_content__wrapper_box'}>
+							<div 
+								style={message.indef == localStorage.getItem('indef') ? {color: '#326fa8'} : {}}
+								className="chat_content__wrapper_userName">{message?.fullname}
+							</div>
 							<div>{message?.message}</div>
 						</div>
 					))}
+					<div ref={refChatWrapper}/>
 				</div>
 				<form className="chat_wrapper__footer">
 					<input ref={refSendMessage} type="text" className="chat_wrapper__footer_input input_styles" placeholder='type here' required/>
@@ -94,7 +101,9 @@ const Chat = () => {
 						<img src='/send_message.png' alt='send'/>
 					</button>	
 				</form>
-			</>
+				</>
+				}
+							</>
 			:
 			<div className="chat_wrapper__auth">
 				<h2>Please enter your full name</h2>

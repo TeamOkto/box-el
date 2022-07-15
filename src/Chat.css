@@ -8,12 +8,24 @@
 	border-radius: 10px;
 	z-index: 20;
 }
+
 .chat_wrapper__header{
 	padding: 5px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.chat_wrapper__header button{
+	background: transparent;
+	border: none;
+	font-size: 34px;
+	color: rgb(0, 149, 255);
+	cursor: pointer;
 }
 .chat_content__wrapper{
 	border-top: 1px solid rgb(196, 196, 196);
-	width: 100%;
+	width: 300px;
 	height: 400px;
 	background-color: #fff;
 	overflow-y: auto;
@@ -75,8 +87,6 @@
 }
 
 .chat_content__wrapper_box{
-	max-width: 150px;
-	width: 100%;
 	white-space: pre-wrap;
 	margin: 15px 0;
 	padding: 5px 20px;
@@ -97,6 +107,13 @@
 .owner-message{
 	display: flex;
 	flex-direction: column;
+	text-align: left;
 	align-items: flex-end;
-	justify-content: flex-end;
+}
+
+.hidden-button{
+	display: none;
+}
+.visible-button{
+	display: block;
 }
