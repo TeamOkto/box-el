@@ -2,12 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyA_0GPDiKi_3SK3clG1TvIxAxwvffmVbus",
-	authDomain: "todolist-dcc0a.firebaseapp.com",
-	projectId: "todolist-dcc0a",
-	storageBucket: "todolist-dcc0a.appspot.com",
-	messagingSenderId: "196415986511",
-	appId: "1:196415986511:web:2d4f2a4d02f3261e14c33a"
+	apiKey: "AIzaSyCRezzblQzSMd-PSCJzt5LVl5I_NxllWfU",
+	authDomain: "fir-chat-45024.firebaseapp.com",
+	databaseURL: "https://fir-chat-45024-default-rtdb.firebaseio.com",
+	projectId: "fir-chat-45024",
+	storageBucket: "fir-chat-45024.appspot.com",
+	messagingSenderId: "431344732971",
+	appId: "1:431344732971:web:9b4be47f28bf70642a536e",
+	measurementId: "G-QB60Q28KRQ"
 };
 
 initializeApp(firebaseConfig);
