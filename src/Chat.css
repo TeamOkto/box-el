@@ -30,6 +30,13 @@
 	background-color: #fff;
 	overflow-y: auto;
 }
+.chat_content__wrapper_box{
+	white-space: pre-wrap;
+    word-break: break-word;
+	max-width: 200px;
+	width: 100%;
+	height: auto;
+}
 .chat_wrapper__footer{
 	padding: 5px 20px;
 	display: flex;
@@ -109,6 +116,8 @@
 	flex-direction: column;
 	text-align: left;
 	align-items: flex-end;
+
+	margin: 0 0 0 auto;
 }
 
 .hidden-button{

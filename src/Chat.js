@@ -1,9 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import { db } from './firebase.config';
-
-
-import { collection, addDoc, serverTimestamp, orderBy, query, onSnapshot } from 'firebase/firestore';
+import { 
+	collection, 
+	addDoc, 
+	serverTimestamp, 
+	orderBy, 
+	query, 
+	onSnapshot 
+} from 'firebase/firestore';
 
 import './Chat.css';
 
@@ -13,6 +18,7 @@ const Chat = () => {
 
     const [messages, setMessages] = useState([]);
 	const [stateChat, setStateChat] = useState(false);
+	const [getFetchingData, setGetFetchingData] = useState(true);
 
     const colRef = collection(db, "messages");
 
@@ -24,7 +30,7 @@ const Chat = () => {
                 setMessages(messagesUsers);
             })
         })
-    },[])
+    },[getFetchingData])
 
     const [data, setData] = useState({
         name: '',
@@ -44,6 +50,7 @@ const Chat = () => {
     useEffect(()=> {
         setData({name: localStorage.getItem('user'), indef: localStorage.getItem('indef')})
     }, [])
+
 	const refChatWrapper = useRef();
 	const scrollToBottom = useRef();
 
@@ -68,6 +75,18 @@ const Chat = () => {
 	useEffect(() => {
 		refChatWrapper?.current?.scrollIntoView({behavior: "smooth"})
 	})
+
+	useEffect(() => {
+		scrollToBottom?.current?.addEventListener('scroll', scrollHandler);
+		return () => scrollToBottom?.current?.removeEventListener('scroll', scrollHandler);
+	});
+
+
+	const scrollHandler = (e) => {
+		if(scrollToBottom.current.scrollHeight - (scrollToBottom.current.scrollTop + window.innerHeight) < 10){
+			setGetFetchingData(true);
+		}
+	}
 
 	return(
 		<div className={"chat_wrapper"}>
@@ -103,12 +122,13 @@ const Chat = () => {
 				</form>
 				</>
 				}
-							</>
+				</>
 			:
+			stateChat &&
 			<div className="chat_wrapper__auth">
 				<h2>Please enter your full name</h2>
 				<form>
-					<input ref={ref} type="text" className="input_styles" placeholder='type here' required/>
+					<input ref={ref} type="text" minLength={3} maxLength={15} className="input_styles" placeholder='type here' required/>
 					<button type='submit' onClick={handlerClick}>Confirm</button>
 				</form>
 			</div>
