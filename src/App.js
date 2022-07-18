@@ -18,6 +18,7 @@ import Video from './Video.js'
 
 import './App.css';
 
+
 /**
  * Init Helmet
  */
@@ -64,6 +65,7 @@ const VideoLoader = () => {
 function App() {
 
 	return (
+		<>
 
 	<Router>
 
@@ -111,8 +113,9 @@ function App() {
 		</div>
 
 	</Router>
-
-  );
+	<Chat/>
+	</>
+	);
 }
 
 export default App;
