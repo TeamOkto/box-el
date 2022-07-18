@@ -13,7 +13,7 @@ import
 
 import './Chat.css';
 
-const Chat = () => { 
+const Chat = (props) => { 
 
 	let today = new Date()
 
@@ -38,6 +38,9 @@ const Chat = () => {
         });
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[getFetchingData]);
+
+	messages.forEach(element => console.log(element.timestamp <= today));
+
 
 	useEffect(() => {
 		refChatWrapper?.current?.scrollIntoView({behavior: "smooth"})
@@ -95,7 +98,7 @@ const Chat = () => {
 	return(
 		<div className={"chat_wrapper"}>
 			<div onClick={() => (setStateChat(!stateChat))} className="chat_wrapper__header">
-				<p className="chat_wrapper__title">Chat</p>
+				<p className="chat_wrapper__title">{props.lang === "fr" ? "Messagerie" : "Chat"}</p>
 				<button 
 						className={stateChat ? "visible-button" : "hidden-button"} 
 						onClick={() => setStateChat(!stateChat)}>
@@ -126,7 +129,7 @@ const Chat = () => {
 						ref={refSendMessage} 
 						type="text" 
 						className="chat_wrapper__footer_input input_styles" 
-						placeholder='type here' 
+						placeholder={props.lang === "fr" ? "Écrire ici" : "type here"} 
 						min={1} 
 						minLength={1}
 						required
@@ -141,7 +144,7 @@ const Chat = () => {
 			:
 			stateChat &&
 			<div className="chat_wrapper__auth">
-				<h2>Please enter your full name</h2>
+				<h2>{props.lang === "fr" ? "Veuillez entrer votre nom complet" : "Please enter your full name"}</h2>
 				<form>
 					<input 
 						ref={ref} 
@@ -149,10 +152,10 @@ const Chat = () => {
 						minLength={3} 
 						maxLength={15} 
 						className="input_styles" 
-						placeholder='type here' 
+						placeholder={props.lang === "fr" ? "Écrire ici" : "type here"}  
 						required
 					/>
-					<button type='submit' onClick={handlerClick}>Confirm</button>
+					<button type='submit' onClick={handlerClick}>{props.lang === "fr" ? "Confirmer" : "Confirm"}</button>
 				</form>
 			</div>
 			}

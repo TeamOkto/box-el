@@ -113,7 +113,6 @@ function App() {
 		</div>
 
 	</Router>
-	<Chat/>
 	</>
 	);
 }
