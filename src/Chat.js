@@ -55,9 +55,16 @@ const Chat = () => {
 
     const handlerClick = (event) => {
         event.preventDefault();
+		setData({name: ref.current.value})
         localStorage.setItem('user', ref.current.value);
         localStorage.setItem('indef', today.getMilliseconds());
+		setStateChat(true);
     }
+
+	const [data, setData] = useState({
+        name: '',
+        indef: 2
+    })
 
     const sendMessageHandler = (e) => {
 		e.preventDefault()
@@ -75,6 +82,9 @@ const Chat = () => {
 			refSendMessage.current.value = '';
 		}
     };
+	useEffect(()=> {
+        setData({name: localStorage.getItem('user'), indef: localStorage.getItem('indef')})
+    }, [])
 
 	const scrollHandler = () => {
 		if(scrollToBottom.current.scrollHeight - (scrollToBottom.current.scrollTop + window.innerHeight) < 10){
@@ -87,12 +97,12 @@ const Chat = () => {
 			<div onClick={() => (setStateChat(!stateChat))} className="chat_wrapper__header">
 				<p className="chat_wrapper__title">Chat</p>
 				<button 
-						className={!stateChat ? "hidden-button" : "visible-button"} 
+						className={stateChat ? "visible-button" : "hidden-button"} 
 						onClick={() => setStateChat(!stateChat)}>
 					×
 				</button>
 			</div>
-			{localStorage.getItem('user') !== null && localStorage.getItem('user') !== '' ?
+			{data.indef !== null && data.name !== '' ?
 			<>
 			{stateChat &&
 			<>
