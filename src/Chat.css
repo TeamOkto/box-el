@@ -126,3 +126,7 @@
 .visible-button{
 	display: block;
 }
+
+#sendMessageID{
+	opacity: 0;
+}
