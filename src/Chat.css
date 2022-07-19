@@ -151,9 +151,10 @@
 	z-index: 1;
 }
 
-@media (max-width: 450px){
+@media (max-width: 500px){
 	.chat_wrapper{
-		left: 50px;
+		left: 25px;
+		right: 25px;
 		width: auto;
 	}
 }
