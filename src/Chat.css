@@ -34,7 +34,7 @@
 }
 .chat_content__wrapper_box{
 	white-space: pre-wrap;
-    word-break: break-word;
+	word-break: break-word;
 	max-width: 200px;
 	width: 100%;
 	height: auto;
@@ -42,13 +42,14 @@
 }
 .chat_wrapper__footer{
 	padding: 5px 20px;
+	padding-right: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 .input_styles{
 	background-color: #eeeeee;
-	width: 220px;
+	width: 235px;
 	height: 30px;
 	border-radius: 20px;
 	padding: 0 20px;
