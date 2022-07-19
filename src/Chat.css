@@ -158,3 +158,8 @@
 		width: auto;
 	}
 }
+@media (max-width: 450px){
+	.chat_wrapper{
+		right: 25px;
+	}
+}
