@@ -149,3 +149,10 @@
 	bottom: -60%;
 	z-index: 1;
 }
+
+@media (max-width: 450px){
+	.chat_wrapper{
+		left: 50px;
+		width: auto;
+	}
+}
