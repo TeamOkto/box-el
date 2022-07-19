@@ -134,7 +134,7 @@ const Chat = (props) => {
 						ref={refSendMessage} 
 						type="text" 
 						className="chat_wrapper__footer_input input_styles" 
-						placeholder={props.lang === "fr" ? "Écrire ici" : "type here"} 
+						placeholder={props.lang === "fr" ? "Écrire ici" : "Type here"} 
 						min={1} 
 						minLength={1}
 						autoFocus={true}
@@ -158,7 +158,7 @@ const Chat = (props) => {
 						minLength={3} 
 						maxLength={15} 
 						className="input_styles" 
-						placeholder={props.lang === "fr" ? "Écrire ici" : "type here"}  
+						placeholder={props.lang === "fr" ? "Écrire ici" : "Type here"}  
 						required
 						autoFocus={true}
 					/>
