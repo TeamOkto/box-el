@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { useState } from 'react';
 import { db } from './firebase.config';
 import 
@@ -18,6 +18,7 @@ const Chat = (props) => {
 	let today = new Date()
 
     const [messages, setMessages] = useState([]);
+
 	const [stateChat, setStateChat] = useState(false);
 	const [getFetchingData, setGetFetchingData] = useState(true);
 
@@ -28,18 +29,23 @@ const Chat = (props) => {
 
     const colRef = collection(db, "messages");
 
+	const useMemoTime = useMemo(() => {
+		return (new Date().getTime()-(new Date().getTime()%1000))/1000
+	}, [])
+
     useEffect(()=>{
         onSnapshot(query(colRef, orderBy('timestamp')), querySnapshot=>{
             let messagesUsers = [];
             querySnapshot.forEach(qs=>{
-                messagesUsers.push({...qs.data(), id: qs.id})
-                setMessages(messagesUsers);
+				const data = qs.data()
+				if(data?.timestamp?.seconds > useMemoTime){
+					messagesUsers.push({...qs.data(), id: qs.id})
+					setMessages(messagesUsers);
+				}
             });
         });
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[getFetchingData]);
-
-	messages.forEach(element => console.log(element.timestamp <= today));
 
 
 	useEffect(() => {
