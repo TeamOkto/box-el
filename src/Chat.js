@@ -12,6 +12,8 @@ import
 } from 'firebase/firestore';
 
 import './Chat.css';
+import './components/message'
+import { Message } from './components/message';
 
 const Chat = (props) => { 
 
@@ -117,16 +119,13 @@ const Chat = (props) => {
 			<>
 				<div ref={scrollToBottom} className="chat_content__wrapper">
 					{messages.map((message, index) => (
-						<div 
-							key={index} 
-							className={message.indef === localStorage.getItem('indef') ? 'chat_content__wrapper_box owner-message' : 'chat_content__wrapper_box'}
-						>
-							<div 
-								style={message.indef === localStorage.getItem('indef') ? {color: '#326fa8'} : {}}
-								className="chat_content__wrapper_userName">{message?.fullname}
-							</div>
-							<div>{message?.message}</div>
-						</div>
+						<Message
+							index={index}
+							indef={message.indef}
+							fullname={message.fullname}
+							message={message.message}
+							timestamp={message?.timestamp.seconds}
+						/>
 					))}
 					<div ref={refChatWrapper}/>
 				</div>
@@ -138,6 +137,7 @@ const Chat = (props) => {
 						placeholder={props.lang === "fr" ? "Écrire ici" : "type here"} 
 						min={1} 
 						minLength={1}
+						autoFocus={true}
 						required
 					/>	
 					<button type='submit' className="chat_wrapper__footer_send" onClick={sendMessageHandler}>
@@ -160,6 +160,7 @@ const Chat = (props) => {
 						className="input_styles" 
 						placeholder={props.lang === "fr" ? "Écrire ici" : "type here"}  
 						required
+						autoFocus={true}
 					/>
 					<button type='submit' onClick={handlerClick}>{props.lang === "fr" ? "Confirmer" : "Confirm"}</button>
 				</form>

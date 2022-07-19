@@ -101,6 +101,7 @@
 	white-space: pre-wrap;
 	margin: 15px 0;
 	padding: 5px 20px;
+	position: relative;
 }
 
 .chat_content__wrapper_userName{
@@ -132,4 +133,19 @@
 
 #sendMessageID{
 	opacity: 0;
+}
+
+.prompt{
+	font-size: 12px;
+	background-color: rgba(118, 118, 118, 0.872);
+	color: #fff;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.prompt-container{
+	position: absolute;
+	right: 0;
+	bottom: -60%;
+	z-index: 1;
 }
