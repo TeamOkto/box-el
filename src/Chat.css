@@ -142,11 +142,24 @@
 	color: #fff;
 	padding: 5px;
 	border-radius: 10px;
+	max-width: 150px;
+	width: 100%;
+	min-height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.prompt-container{
+.chat_content__wrapper_box .prompt-container{
 	position: absolute;
-	right: 0;
+	left: 10%;
+	bottom: -60%;
+	z-index: 1;
+}
+
+.owner-message .prompt-container{
+	position: absolute;
+	left: 20%;
 	bottom: -60%;
 	z-index: 1;
 }
