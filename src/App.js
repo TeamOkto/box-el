@@ -74,11 +74,11 @@ function App() {
 		</Helmet>
 
 		<div className="wp-block-cover alignfull has-background-dim">
-			<img loading="lazy" width="2000" height="1125" className="wp-block-cover__image-background wp-image-5990" alt="" src="https://eoatownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03.png" data-object-fit="cover" srcset="https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03.png 2000w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03-300x169.png 300w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03-1024x576.png 1024w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03-768x432.png 768w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/02/Q1-2022-EL-Town-Hall-2.03-1536x864.png 1536w" sizes="(max-width: 2000px) 100vw, 2000px" />
+			<img loading="lazy" width="2000" height="1125" className="wp-block-cover__image-background wp-image-5990" alt="" src="el/Q1-2022-EL-Town-Hall-2.03.png" data-object-fit="cover" srcset="el/Q1-2022-EL-Town-Hall-2.03.png 2000w, el/Q1-2022-EL-Town-Hall-2.03-300x169.png 300w, el/Q1-2022-EL-Town-Hall-2.03-1024x576.png 1024w, el/Q1-2022-EL-Town-Hall-2.03-768x432.png 768w, el/Q1-2022-EL-Town-Hall-2.03-1536x864.png 1536w" sizes="(max-width: 2000px) 100vw, 2000px" />
 			<div className="wp-block-cover__inner-container">
 				<div className="wp-block-image">
 					<figure className="aligncenter size-large">
-						<img loading="lazy" width="1024" height="118" src="https://eoatownhall.ouronlineevent.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-17-at-10.01.18-AM-1024x118.png" alt="" className="wp-image-5863" srcset="https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-17-at-10.01.18-AM-1024x118.png 1024w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-17-at-10.01.18-AM-300x35.png 300w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-17-at-10.01.18-AM-768x89.png 768w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-17-at-10.01.18-AM-1536x177.png 1536w, https://eltownhall.ouronlineevent.com/wp-content/uploads/2022/01/Screen-Shot-2022-01-17-at-10.01.18-AM-2048x236.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px"/>
+						<img loading="lazy" width="1024" height="118" src="el/Screen-Shot-2022-01-17-at-10.01.18-AM-1024x118.png" alt="" className="wp-image-5863" srcset="el/Screen-Shot-2022-01-17-at-10.01.18-AM-1024x118.png 1024w, el/Screen-Shot-2022-01-17-at-10.01.18-AM-300x35.png 300w, el/Screen-Shot-2022-01-17-at-10.01.18-AM-768x89.png 768w, el/Screen-Shot-2022-01-17-at-10.01.18-AM-1536x177.png 1536w, el/Screen-Shot-2022-01-17-at-10.01.18-AM-2048x236.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px"/>
 					</figure>
 				</div>
 			</div>
@@ -102,9 +102,11 @@ function App() {
 				<a className="button" href="/en">English</a>
 			</div>
 
-			<Routes>
-				<Route exact path="/:lang" element={<ChatLoader/>}/>
-			</Routes>
+			{
+			//<Routes>
+			//	<Route exact path="/:lang" element={<ChatLoader/>}/>
+			//</Routes>
+			}
 
 			<div className="footer">
 
