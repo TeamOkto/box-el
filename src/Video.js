@@ -7,10 +7,14 @@ export default class Video extends Component {
 
 		var lang = this.props.lang;
 		var link = '';
+		//if ( lang === 'fr' )
+		//	link = 'https://vimeo.com/event/731893703/embed';
+		//else if ( lang === 'en' )
+		//	link = 'https://vimeo.com/event/2265661/embed';
 		if ( lang === 'fr' )
-			link = 'https://vimeo.com/event/2251400/embed';
+			link = 'https://player.vimeo.com/video/731893688?h=6692a8514d';
 		else if ( lang === 'en' )
-			link = 'https://vimeo.com/event/2265661/embed';
+			link = 'https://player.vimeo.com/video/731893703?h=5b6b4e0670';
 
 		if ( link === '' )
 			return ''; // Invalid or missing language
