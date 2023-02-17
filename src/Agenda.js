@@ -17,71 +17,93 @@ export default class Agenda extends Component {
 		    return(
 				<div>
 					<h1>AGENDA</h1>
-					<h2>July 21st at 3pm EDT &bull; 21 Juillet à 15h, Heure avancée de l’Est</h2>
+					<h2>February 22nd at 2pm EDT &bull; 22 février à 14h, Heure avancée de l’Est</h2>
 					<div id="agenda" className="agenda">
 						<div className="table">
 							<div className="row">
 								<div className="cell num">1</div>
 								<div className="cell">
-									<strong>Welcome<br/>
-									Bienvenue</strong><br/>
-									Rick Gadd, President EssilorLuxottica Canada and Essilor Instruments NA
+									<strong>
+										Welcome, Q4 recap<br/>
+										Bienvenue, Récapitulatif du 4ème trimestre
+									</strong><br/>
+									Rick Gadd, President of Wholesale Canada for Essilor Luxottica &amp; Instruments, North America<br/>
+									10 minutes
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">2</div>
 								<div className="cell">
-									<strong>EssilorLuxottica Wholesale Canada Story<br/>
-									L’histoire de EssilorLuxottica Canada</strong><br/>
-									Rick Gadd, President EL Canada and Essilor Instruments NA
+									<strong>
+										2023 Business Objectives<br/>
+										Objectifs d’affaires 2023
+									</strong><br/>
+									Rick Gadd, President of Wholesale Canada for Essilor Luxottica &amp; Instruments, North America<br/>
+									10 minutes
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">3</div>
 								<div className="cell">
-									<strong>Meet the Canadian Leadership Team<br/>
-									Rencontrer l’équipe de direction</strong><br/>
-									Canada Executive Leadership Team
+									<strong>
+										Marketing Strategy for 2023<br/>
+										Stratégie Marketing pour 2023
+									</strong><br/>
+									Pascale Desroches, Head of Marketing, Essilor Luxottica Canada<br/>
+									10 minutes
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">4</div>
 								<div className="cell">
-									<strong>New Ways of Working Update<br/>
-									Mise à jour des nouvelles méthodes de travail</strong><br/>
-									Isabelle Thériault, Vice President of Human Resources EL Canada
+									<strong>
+										Frames Overview<br/>
+										Survol des montures
+									</strong><br/>
+									Ken Clark, National Director of Sales, Essilor Luxottica Canada<br/>
+									Marty Hosseiny, Sales Manager, Key Accounts, Essilor Luxottica Canada<br/>
+									10 minutes
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">5</div>
 								<div className="cell">
-									<strong>Eye to Eye with Leaders Open Q&amp;A<br/>
-									Partage de point de vue avec les leaders, questions et réponses ouvertes</strong><br/>
-									Canada Executive Leadership Team
+									<strong>
+										Human Ressources Update<br/>
+										Mise à jour des Ressources humaines
+									</strong><br/>
+									Isabelle Thériault, Vice présidente, Ressources humaines, Essilor Luxottica Canada<br/>
+									10 minutes
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">6</div>
 								<div className="cell">
-									<strong>Special Guest Speaker<br/>
-									Conférencier invité</strong><br/>
-									Maxime Laoun, Olympic Gold Medalist interviewed by Pascale Desroches, Head of Marketing for Essilor Canada<br/>
-									Director EL Canada
+									<strong>
+										Update on OneSight Essilor Luxottica Foundation Canada <br/>
+										Mise à jour sur la Fondation OneSight Essilor Luxottica Foundation Canada
+									</strong><br/>
+									Kris Kelm, Community Impact Manager, OneSight Essilor Luxottica Foundation, Canada<br/>
+									10 minutes
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">7</div>
 								<div className="cell">
-									<strong>Final Thoughts &amp; Close<br/>
-									Conclusion</strong><br/>
-									Rick Gadd
+									<strong>
+										Q&A<br/>
+										Questions et réponses
+									</strong><br/>
+									10-15 minutes
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">8</div>
 								<div className="cell">
-									<strong>Happy Hour - RX Café (4:30-5:30)<br/>
-									Cocktail - RX Café (4:30-5:30)</strong>
+									<strong>
+										Coffee and sweets (3:00-4:00)<br/>
+										Café et gourmandises (3:00-4:00)
+									</strong>
 								</div>
 							</div>
 						</div>
