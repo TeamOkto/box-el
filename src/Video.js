@@ -12,9 +12,9 @@ export default class Video extends Component {
 		//else if ( lang === 'en' )
 		//	link = 'https://vimeo.com/event/2265661/embed';
 		if ( lang === 'fr' )
-			link = 'https://player.vimeo.com/video/731893688?h=6692a8514d';
+			link = 'https://vimeo.com/event/2553104/embed/e0ed8880e0';
 		else if ( lang === 'en' )
-			link = 'https://player.vimeo.com/video/731893703?h=5b6b4e0670';
+			link = 'https://vimeo.com/event/2553162/embed/e021428297';
 
 		if ( link === '' )
 			return ''; // Invalid or missing language
