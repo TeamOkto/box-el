@@ -66,10 +66,10 @@ export default class Agenda extends Component {
 								<div className="cell num">5</div>
 								<div className="cell">
 									<strong>
-										Update on OneSight Essilor Luxottica Foundation Canada <br/>
-										Mise à jour sur la Fondation OneSight Essilor Luxottica Foundation Canada
+										Update on OneSight Essilor Luxottica Foundation<br/>
+										Mise à jour sur la Fondation OneSight Essilor Luxottica Foundation
 									</strong><br/>
-									Kris Kelm, Community Impact Manager, OneSight Essilor Luxottica Foundation, Canada
+									Becky Palm, VP, Executive Director and General Counsel OneSight EssilorLuxottica Foundation North America 
 								</div>
 							</div>
 						</div>
