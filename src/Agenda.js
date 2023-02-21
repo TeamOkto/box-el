@@ -56,8 +56,8 @@ export default class Agenda extends Component {
 								<div className="cell num">4</div>
 								<div className="cell">
 									<strong>
-										Human Ressources Update<br/>
-										Mise à jour des Ressources humaines
+										People and Culture Updates<br/>
+										Mise à jour talents et culture
 									</strong><br/>
 									Isabelle Thériault, Vice présidente, Ressources humaines, Essilor Luxottica Canada
 								</div>
@@ -66,8 +66,8 @@ export default class Agenda extends Component {
 								<div className="cell num">5</div>
 								<div className="cell">
 									<strong>
-										Update on OneSight Essilor Luxottica Foundation<br/>
-										Mise à jour sur la Fondation OneSight Essilor Luxottica Foundation
+										Update on OneSight Essilor Luxottica Foundation Canada<br/>
+										Mise à jour sur la Fondation OneSight Essilor Luxottica Canada
 									</strong><br/>
 									Becky Palm, VP, Executive Director and General Counsel OneSight EssilorLuxottica Foundation North America 
 								</div>
