@@ -12,7 +12,7 @@ import {
 
 import { Helmet, HelmetData } from 'react-helmet-async';
 
-import Chat from './Chat.js'
+//import Chat from './Chat.js'
 import Agenda from './Agenda.js'
 import Video from './Video.js'
 
