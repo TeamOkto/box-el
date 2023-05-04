@@ -29,12 +29,12 @@ const helmetData = new HelmetData({});
  * Chat loader
  */
 
-const ChatLoader = () => {
+/*const ChatLoader = () => {
 	const { lang } = useParams();
 	return (
 		<Chat lang={lang}/>
 	);
-};
+};*/
 
 /**
  * Agenda loader
