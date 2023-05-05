@@ -17,59 +17,60 @@ export default class Agenda extends Component {
 		    return(
 				<div>
 					<h1>AGENDA</h1>
-					<h2>February 22nd at 2pm EDT &bull; 22 février à 14h, Heure avancée de l’Est</h2>
+					<h2>June 6th at 12:30pm EDT &bull; 6 juin à 12h30, Heure avancée de l’Est</h2>
 					<div id="agenda" className="agenda">
 						<div className="table">
 							<div className="row">
 								<div className="cell num">1</div>
 								<div className="cell">
 									<strong>
-										Welcome / Bienvenue<br/>
-										2023 Business Objectives<br/>
-										Objectifs d’affaires 2023
+										Welcome & Business Update<br/>
+										Accueil et mise à jour des activités professionnelles
 									</strong><br/>
-									Rick Gadd, President of Wholesale Canada for Essilor Luxottica &amp; Instruments, North America
+									Fabrizio Uguzzoni, President of Professional Solutions, EssilorLuxottica North America
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">2</div>
 								<div className="cell">
 									<strong>
-										Marketing Strategy for 2023<br/>
-										Stratégie Marketing pour 2023
+										Innovation Spotlight<br/>
+										Mise en lumière des innovations
 									</strong><br/>
-									Pascale Desroches, Head of Marketing, Essilor Luxottica Canada
+									Sherianne James, Chief Marketing Officer/Senior Vice President of PS Marketing, EL NA<br/>
+									Dan Alder, Vice President, Wholesale Marketing, Ray-Ban<br/>
+									Spencer Jones, Director of New Business Categories<br/>
+									Rick Gadd, President EssilorLuxottica Professional Solutions, Canada and Essilor Instruments North America<br/>
+									Ettore Mosca, Executive Vice President and General Manager of NA Rx Operations
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">3</div>
 								<div className="cell">
 									<strong>
-										Frames Overview<br/>
-										Survol des montures
+										People & Culture<br/>
+										Collaborateurs et culture d’entreprise
 									</strong><br/>
-									Ken Clark, National Director of Sales, Essilor Luxottica Canada<br/>
-									Marty Hosseiny, Sales Manager, Key Accounts, Essilor Luxottica Canada
+									Randee Epstein, Senior Vice President, Human Resources
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">4</div>
 								<div className="cell">
 									<strong>
-										People and Culture Updates<br/>
-										Mise à jour talents et culture
+										Q&A<br/>
+										Questions et réponses
 									</strong><br/>
-									Isabelle Thériault, Vice présidente, Ressources humaines, Essilor Luxottica Canada
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">5</div>
 								<div className="cell">
 									<strong>
-										Update on OneSight Essilor Luxottica Foundation Canada<br/>
-										Mise à jour sur la Fondation OneSight Essilor Luxottica Canada
+										Culinary Stations & Mocktail<br/>
+										Stations culinaires et mocktail
 									</strong><br/>
-									Becky Palm, VP, Executive Director and General Counsel OneSight EssilorLuxottica Foundation North America 
+									Hosted by Ray-Ban
 								</div>
 							</div>
 						</div>
