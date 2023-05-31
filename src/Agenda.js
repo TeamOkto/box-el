@@ -17,7 +17,7 @@ export default class Agenda extends Component {
 		    return(
 				<div>
 					<h1>AGENDA</h1>
-					<h2>June 6th at 12:30pm EDT &bull; 6 juin à 12h30, Heure avancée de l’Est</h2>
+					<h2>June 6th at 3:00pm EDT &bull; 6 juin à 15h00, Heure avancée de l’Est</h2>
 					<div id="agenda" className="agenda">
 						<div className="table">
 							<div className="row">
