@@ -27,7 +27,7 @@ export default class Agenda extends Component {
 										Welcome & Business Update<br/>
 										Accueil et mise à jour des activités professionnelles
 									</strong><br/>
-									Fabrizio Uguzzoni, President of Professional Solutions, EssilorLuxottica North America
+									&bull; Fabrizio Uguzzoni, President of Professional Solutions, EssilorLuxottica North America
 								</div>
 							</div>
 							<div className="row">
@@ -37,10 +37,10 @@ export default class Agenda extends Component {
 										Innovation Spotlight<br/>
 										Mise en lumière des innovations
 									</strong><br/>
-									Sherianne James, Chief Marketing Officer/Senior Vice President of PS Marketing, EL NA<br/>
-									Dan Alder, Vice President, Wholesale Marketing, Ray-Ban<br/>
-									Spencer Jones, Director of New Business Categories<br/>
-									Ettore Mosca, Executive Vice President and General Manager of NA Rx Operations
+									&bull; Sherianne James, Chief Marketing Officer/Senior Vice President of PS Marketing, EL NA<br/>
+									&bull; Dan Alder, Vice President, Wholesale Marketing, Ray-Ban<br/>
+									&bull; Spencer Jones, Director of New Business Categories<br/>
+									&bull; Ettore Mosca, Executive Vice President and General Manager of NA Rx Operations
 								</div>
 							</div>
 							<div className="row">
@@ -50,8 +50,8 @@ export default class Agenda extends Component {
 										People & Culture<br/>
 										Collaborateurs et culture d’entreprise
 									</strong><br/>
-									Randee Epstein, Senior Vice President, Human Resources<br/>
-									Pasquale Levato, EVP of Human Resources, EssilorLuxottica NA
+									&bull; Fabrizio Uguzzoni, President of Professional Solutions, EssilorLuxottica North America<br/>
+									&bull; Pasquale Levato, EVP of Human Resources, EssilorLuxottica NA
 								</div>
 							</div>
 							<div className="row">
@@ -60,7 +60,7 @@ export default class Agenda extends Component {
 									<strong>
 										Happy Hour
 									</strong><br/>
-									Hosted by Ray-Ban
+									&bull; Hosted by Ray-Ban
 								</div>
 							</div>
 						</div>
