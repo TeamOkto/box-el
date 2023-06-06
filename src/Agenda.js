@@ -40,7 +40,6 @@ export default class Agenda extends Component {
 									Sherianne James, Chief Marketing Officer/Senior Vice President of PS Marketing, EL NA<br/>
 									Dan Alder, Vice President, Wholesale Marketing, Ray-Ban<br/>
 									Spencer Jones, Director of New Business Categories<br/>
-									Rick Gadd, President EssilorLuxottica Professional Solutions, Canada and Essilor Instruments North America<br/>
 									Ettore Mosca, Executive Vice President and General Manager of NA Rx Operations
 								</div>
 							</div>
@@ -51,24 +50,15 @@ export default class Agenda extends Component {
 										People & Culture<br/>
 										Collaborateurs et culture d’entreprise
 									</strong><br/>
-									Randee Epstein, Senior Vice President, Human Resources
+									Randee Epstein, Senior Vice President, Human Resources<br/>
+									Pasquale Levato, EVP of Human Resources, EssilorLuxottica NA
 								</div>
 							</div>
 							<div className="row">
 								<div className="cell num">4</div>
 								<div className="cell">
 									<strong>
-										Q&A<br/>
-										Questions et réponses
-									</strong><br/>
-								</div>
-							</div>
-							<div className="row">
-								<div className="cell num">5</div>
-								<div className="cell">
-									<strong>
-										Culinary Stations & Mocktail<br/>
-										Stations culinaires et mocktail
+										Happy Hour
 									</strong><br/>
 									Hosted by Ray-Ban
 								</div>
