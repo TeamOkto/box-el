@@ -78,6 +78,7 @@ body
 	display: table-cell;
 	padding: 20px;
 	text-align: left;
+	line-height: 20px;
 }
 .cell.num
 {
