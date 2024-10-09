@@ -14,7 +14,7 @@ import { Helmet, HelmetData } from 'react-helmet-async';
 
 //import Chat from './Chat.js'
 import Agenda from './Agenda.js'
-import Video from './Video.js'
+//import Video from './Video.js'
 
 import './App.css';
 
@@ -51,12 +51,12 @@ const AgendaLoader = () => {
  * Video component
  */
 
-const VideoLoader = () => {
+/*const VideoLoader = () => {
 	const { lang } = useParams();
 	return (
 		<Video lang={lang}/>
 	);
-};
+};*/
 
 /**
  * App
@@ -86,22 +86,26 @@ function App() {
 
 		<div className="App">
 
+			{
 			<Routes>
 				<Route exact path="/" element={<AgendaLoader/>}/>
 				<Route exact path="/:lang" element={<AgendaLoader/>}/>
 			</Routes>
-
-			<Routes>
-				<Route exact path="/:lang" element={<VideoLoader/>}/>
-			</Routes>
+			}
 
 			{
-			<div className="buttons">
-				<h2>Choisissez une langue pour l'événement</h2>
-				<h2>Choose a language for the event</h2>
-				<a className="button" href="/fr">Français</a>
-				<a className="button" href="/en">English</a>
-			</div>
+			//<Routes>
+			//	<Route exact path="/:lang" element={<VideoLoader/>}/>
+			//</Routes>
+			}
+
+			{
+			//<div className="buttons">
+			//	<h2>Choisissez une langue pour l'événement</h2>
+			//	<h2>Choose a language for the event</h2>
+			//	<a className="button" href="/fr">Français</a>
+			//	<a className="button" href="/en">English</a>
+			//</div>
 			}
 
 			{
