@@ -12,7 +12,7 @@ export default class Agenda extends Component {
 		var label = 'Back to agenda';
 		if ( lang === 'fr' ) label = "Retour à l'agenda";
 
-		if ( show && 1 == 2 )
+		if ( show )
 		{
 		    return(
 				<div>
@@ -73,8 +73,9 @@ export default class Agenda extends Component {
 			return(
 				<div>
 					<h1>AGENDA</h1>
-					<h2>October 22nd, 2024 &bull; 22 octobre 2024</h2>
-					Agenda coming soon &bull; L'agenda sera disponible bientôt
+					<div class="agenda">
+						<a className="button auto" href="/">{label}</a>
+					</div>
 				</div>
 			)
 		}
