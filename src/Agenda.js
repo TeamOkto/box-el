@@ -73,8 +73,8 @@ export default class Agenda extends Component {
 			return(
 				<div>
 					<h1>AGENDA</h1>
-					<h2>Tuesday, October 22nd from 2:00 to 4:00 PM ET (1:00 to 3:00 PM CT)</h2>
-					<h2>Mardi le 22 octobre de 14:00 à 16:00 HNE (13:00 à 15:00 HNC)</h2>
+					<h2>Tuesday, October 22nd from 2:00 to 4:00 PM EDT (1:00 to 3:00 PM CDT)</h2>
+					<h2>Mardi le 22 octobre de 14:00 à 16:00 HAE (13:00 à 15:00 HAC)</h2>
 					Agenda coming soon &bull; L'agenda sera disponible bientôt
 				</div>
 			)
