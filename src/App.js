@@ -87,10 +87,10 @@ function App() {
 		<div className="App">
 
 			{
-			<Routes>
-				<Route exact path="/" element={<AgendaLoader/>}/>
-				<Route exact path="/:lang" element={<AgendaLoader/>}/>
-			</Routes>
+			//<Routes>
+			//	<Route exact path="/" element={<AgendaLoader/>}/>
+			//	<Route exact path="/:lang" element={<AgendaLoader/>}/>
+			//</Routes>
 			}
 
 			{
